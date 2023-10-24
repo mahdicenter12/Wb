@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #name {
+            border: 4px solid blue;
+            background-color: blueviolet;
+            color: white;
+            padding: 1rem;
+            width: 220px;
+            text-align: center;
+            margin: 1rem auto;
+            border-radius: 2rem;
+        }
+
+        .x {
+            list-style: none;
+            background-color: aqua;
+            border: 5px solid #333;
+            border-radius: 1rem;
+            width: 220px;
+            margin: auto;
+            text-align: center;
+            padding: 1rem 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        alert("welcome to you")
+    </script>
+    <p id="name">امیر شریفی</p>
+    <p class="x">متولد:تربت حیدریه</p>
+    <ol class="x">
+        <li>تخصص ها</li>
+        <li>illustrator</li>
+        <li>premiere</li>
+    </ol>
+    <button id="click">click</button>
+    <button id="clear_btn">clear</button>
+    <script>
+        let state=confirm("ادامه بدیم؟")
+        let i=0
+        let obj={}
+        function myfunc(){
+        while(state==true){
+            let name=prompt("نام")
+            let family=prompt("نام خانوادگی")
+            obj[i]={
+                fname:name,
+                lname:family
+            }
+            state=confirm("ادامه بدیم؟")
+            i++;
+
+        }
+    }
+   let cli= document.getElementById("click")
+   cli.document.addEventListener("click", start)
+   let clear_btn=getElementById('click')
+   clear_btn.addEventListener("click", clear)
+    myfunc();
+    console.log(obj)
+    </script>
+</body>
+
+</html>
