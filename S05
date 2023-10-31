@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>اضافه کردن نام و نام خانوادگی</title>
+</head>
+<body>
+
+<form id="myForm">
+  نام: <input type="text" id="firstName" name="firstName"><br>
+  نام خانوادگی: <input type="text" id="lastName" name="lastName"><br><br>
+  <input type="button" value="کلیک کنید" onclick="addNames()">
+  <input type="button" value="کلیک کنید" onclick="addInputs()">
+</form>
+
+<div id="namesList"></div>
+<div id="additionalInputs"></div>
+
+<script>
+function addNames() {
+  var firstName = document.getElementById("firstName").value;
+  var lastName = document.getElementById("lastName").value;
+  var namesList = document.getElementById("namesList");
+  
+  namesList.innerHTML += firstName + " " + lastName + "<br>";
+  
+  var newButton = document.createElement("input");
+  newButton.type = "button";
+  newButton.value = "کلیک کنید";
+  newButton.onclick = addNames;
+}
+  
+  namesList.appendChild(newButton);
+
+  function addInputs() {
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            
+            var additionalInputs = document.getElementById("additionalInputs");
+            
+            var input1 = document.createElement("input");
+            
+            input1.type = "text";
+            input1.name = "input1";
+            input1.value = firstName;
+            additionalInputs.appendChild(input1);
+            
+            var input2 = document.createElement("input");
+            input2.type = "text";
+            input2.name = "input2";
+            input2.value = lastName;
+            additionalInputs.appendChild(input2);
+            Console.console.log(myForm);
+}
+</script>
+
+</body>
+</html>
